@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.fittrack.presentation.navigation.Screen
 import com.example.fittrack.presentation.screens.splash.SplashScreen
+import com.example.fittrack.presentation.screens.onboarding.OnboardingScreen
 
 @Composable
 fun AppNavigation() {
@@ -18,7 +19,11 @@ fun AppNavigation() {
     ) {
 
         composable(Screen.Splash.route) {
-            SplashScreen()
+            SplashScreen(navController)
+        }
+
+        composable(Screen.Onboarding.route) {
+            OnboardingScreen()
         }
 
     }
