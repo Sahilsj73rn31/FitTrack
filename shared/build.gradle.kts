@@ -57,6 +57,9 @@ kotlin {
             implementation(libs.compose.uiTooling)
         }
         commonMain.dependencies {
+
+            implementation(libs.compose.material.icons.extended)
+
             implementation(libs.navigation.compose)
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
