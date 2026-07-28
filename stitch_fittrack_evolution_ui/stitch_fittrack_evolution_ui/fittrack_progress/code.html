@@ -1,0 +1,300 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#5d3f3c",
+                    "on-surface": "#dae6d0",
+                    "surface-dim": "#0c1609",
+                    "surface-container": "#182214",
+                    "on-primary": "#053900",
+                    "inverse-on-surface": "#293324",
+                    "inverse-primary": "#106e00",
+                    "surface-container-high": "#222d1e",
+                    "on-secondary": "#003919",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#2c1513",
+                    "on-error-container": "#ffdad6",
+                    "on-surface-variant": "#baccb0",
+                    "secondary": "#66dd8b",
+                    "surface-container-low": "#141e11",
+                    "primary-container": "#39ff14",
+                    "on-primary-fixed-variant": "#095300",
+                    "on-secondary-container": "#003115",
+                    "surface-bright": "#323c2d",
+                    "primary-fixed-dim": "#2ae500",
+                    "secondary-fixed": "#83fba5",
+                    "tertiary": "#fff8f7",
+                    "surface-container-highest": "#2d3828",
+                    "on-error": "#690005",
+                    "on-secondary-fixed-variant": "#005227",
+                    "outline": "#85967c",
+                    "on-secondary-fixed": "#00210c",
+                    "background": "#0c1609",
+                    "secondary-container": "#25a55a",
+                    "primary-fixed": "#79ff5b",
+                    "on-background": "#dae6d0",
+                    "outline-variant": "#3c4b35",
+                    "inverse-surface": "#dae6d0",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#e7bdb8",
+                    "surface": "#0c1609",
+                    "surface-container-lowest": "#071105",
+                    "on-primary-fixed": "#022100",
+                    "surface-tint": "#2ae500",
+                    "on-tertiary": "#442927",
+                    "surface-variant": "#2d3828",
+                    "on-tertiary-container": "#7a5955",
+                    "primary": "#efffe3",
+                    "tertiary-fixed": "#ffdad6",
+                    "secondary-fixed-dim": "#66dd8b",
+                    "on-primary-container": "#107100",
+                    "tertiary-container": "#ffd3ce"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-margin": "20px",
+                    "gutter-grid": "16px",
+                    "stack-sm": "8px",
+                    "stack-lg": "24px",
+                    "stack-md": "16px",
+                    "stack-xl": "40px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Space Grotesk"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Space Grotesk"],
+                    "label-lg": ["Space Grotesk"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0c1609;
+            color: #dae6d0;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(102, 221, 139, 0.2);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center w-full px-container-margin py-4 bg-background/50 backdrop-blur-md sticky top-0 z-40">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-secondary/30 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional studio headshot of a fit athlete with a determined expression, lit by dramatic neon green and deep shadow lighting. The style is futuristic and high-contrast, fitting a premium biometric dashboard aesthetic. The background is a dark, tech-inspired gymnasium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPJclkxe9qDJ6oWebFNNhNqKStAYIFcD-TLhym5OI6IsQNiHROfVpYfrTV2i8MsMco_pem0Z5BBSJpfg0u4k578pYx7jP_1ckuwUD82SM1fJ5LIXwOvHB2xHJkG7Bg4E8op6QBwlLFRk_GREcWwdUDX8e9EBM3P7xyjBUFITplnVU-E9rs5v4S1G1T2z4erBbX4FOnlNaSZkYkI8FmuNWLfm8I-VLA1SofX43QdMLjIXIaBmVgrPp0TQ">
+</div>
+<span class="font-headline-md text-headline-md-mobile font-bold text-secondary tracking-tight">FitTrack</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-secondary">notifications</span>
+</button>
+</header>
+<main class="px-container-margin mt-stack-md space-y-stack-lg">
+<!-- Header -->
+<section>
+<h1 class="font-headline-xl text-headline-xl text-primary">Progress</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Track today's activities</p>
+</section>
+<!-- Activity Selector -->
+<section class="flex gap-3 overflow-x-auto hide-scrollbar -mx-container-margin px-container-margin">
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg transition-transform active:scale-95">Running</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant font-label-lg text-label-lg transition-transform active:scale-95">Walking</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant font-label-lg text-label-lg transition-transform active:scale-95">Cycling</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant font-label-lg text-label-lg transition-transform active:scale-95">Gym</button>
+<button class="flex-shrink-0 px-6 py-2 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant font-label-lg text-label-lg transition-transform active:scale-95">Yoga</button>
+</section>
+<!-- Live Activity Card -->
+<section class="glass-card rounded-xl p-4 overflow-hidden relative">
+<div class="mb-4">
+<span class="font-label-md text-label-md text-secondary tracking-[0.2em] uppercase">Current Setup</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">Evening Run</h3>
+</div>
+<!-- Map Preview -->
+<div class="relative w-full h-48 rounded-lg overflow-hidden mb-6 group cursor-pointer">
+<div class="absolute inset-0 z-10 bg-gradient-to-t from-background/80 to-transparent"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A high-contrast dark-themed road map with visible street details and a neon green running path overlay." data-location="San Francisco" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAaUMmi1W6aUAR5-0g4tiCV83GFFpp1neZFu1I2JARQhbYqKskVLQVHdd29NGz9CsGB6xiHZeDEmJ2D79azRsRdYaoubLMUTRyS0ROq0KWS6rH_5zFp9_yeBKgp2r4H9IKmYIKAXt81E11VYkuRr03PT7OKLFcnegFmu_Bkn9sucz5_0Ao1COSDEeoFXirdiR-NlgqsEnM1ZXBFDksaMEQjW-D-M3Dy6_ST5jzF0MTGvkU5Pu4OYSQjZ-DsVvQb5lQEVy1_QK_pjjlgR-M&quot;); transform-origin: 96.9697% 85.7292%;">
+</div>
+<!-- Route Line Simulation (SVG Overlay) -->
+
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="space-y-1">
+<p class="font-label-md text-label-md text-on-surface-variant">Distance</p>
+<p class="font-headline-md text-headline-md text-on-surface">5.20 <span class="text-label-md font-normal opacity-60">km</span></p>
+</div>
+<div class="space-y-1">
+<p class="font-label-md text-label-md text-on-surface-variant">Duration</p>
+<p class="font-headline-md text-headline-md text-on-surface">24:15 <span class="text-label-md font-normal opacity-60">min</span></p>
+</div>
+<div class="space-y-1">
+<p class="font-label-md text-label-md text-on-surface-variant">Avg Pace</p>
+<p class="font-headline-md text-headline-md text-on-surface">4'38" <span class="text-label-md font-normal opacity-60">/km</span></p>
+</div>
+<div class="space-y-1">
+<p class="font-label-md text-label-md text-on-surface-variant">Calories</p>
+<p class="font-headline-md text-headline-md text-on-surface">342 <span class="text-label-md font-normal opacity-60">kcal</span></p>
+</div>
+</div>
+<button class="w-full py-4 bg-secondary text-on-secondary font-headline-md text-headline-md rounded-xl shadow-[0_0_20px_rgba(102,221,139,0.3)] hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+                Start Running
+            </button>
+</section>
+<!-- History Section -->
+<section class="space-y-stack-md">
+<div class="flex justify-between items-end">
+<h2 class="font-headline-md text-headline-md text-primary">Recent History</h2>
+<button class="font-label-lg text-label-lg text-secondary">View All</button>
+</div>
+<div class="space-y-3">
+<!-- History Card 1 -->
+<div class="glass-card rounded-xl p-4 flex items-center gap-4 group hover:bg-white/10 transition-colors">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20">
+<span class="material-symbols-outlined text-secondary">directions_run</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<p class="font-label-lg text-label-lg text-on-surface">Morning Trail Run</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Yesterday</p>
+</div>
+<div class="flex gap-4 mt-1 text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">distance</span> 8.4 km</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> 42:10</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">local_fire_department</span> 512 kcal</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</div>
+<!-- History Card 2 -->
+<div class="glass-card rounded-xl p-4 flex items-center gap-4 group hover:bg-white/10 transition-colors">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20">
+<span class="material-symbols-outlined text-secondary">fitness_center</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<p class="font-label-lg text-label-lg text-on-surface">Full Body Power</p>
+<p class="font-label-md text-label-md text-on-surface-variant">2 days ago</p>
+</div>
+<div class="flex gap-4 mt-1 text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">repeat</span> 12 sets</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> 1:05:00</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">local_fire_department</span> 380 kcal</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</div>
+<!-- History Card 3 -->
+<div class="glass-card rounded-xl p-4 flex items-center gap-4 group hover:bg-white/10 transition-colors">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20">
+<span class="material-symbols-outlined text-secondary">pedal_bike</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<p class="font-label-lg text-label-lg text-on-surface">Evening Ride</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Jan 18</p>
+</div>
+<div class="flex gap-4 mt-1 text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">distance</span> 15.2 km</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> 35:20</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">local_fire_department</span> 290 kcal</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-40 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-container-margin py-3 bg-surface-container/80 backdrop-blur-[40px] border-t border-white/10 shadow-[0_-4px_20px_rgba(102,221,139,0.15)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary/80 transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-secondary after:rounded-full after:shadow-[0_0_8px_#66dd8b]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">analytics</span>
+<span class="font-label-md text-label-md">Progress</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary/80 transition-colors" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-label-md text-label-md">AI Coach</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary/80 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions for activity chips
+        const chips = document.querySelectorAll('section:nth-of-type(2) button');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => {
+                    c.classList.remove('bg-secondary', 'text-on-secondary');
+                    c.classList.add('bg-surface-container', 'border', 'border-outline-variant', 'text-on-surface-variant');
+                });
+                chip.classList.add('bg-secondary', 'text-on-secondary');
+                chip.classList.remove('bg-surface-container', 'border', 'border-outline-variant', 'text-on-surface-variant');
+            });
+        });
+
+        // Subtle parallax effect on map
+        document.querySelector('.group').addEventListener('mousemove', (e) => {
+            const map = e.currentTarget.querySelector('div.bg-cover');
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+            map.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+        });
+    </script>
+
+
+</body></html>
