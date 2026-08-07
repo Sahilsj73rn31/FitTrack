@@ -1,35 +1,34 @@
 package com.example.fittrack.core.theme
 
-
 import androidx.compose.ui.graphics.Color
 
-// Primary Colors
-val Primary = Color(0xFF2ECC71)
-val PrimaryDark = Color(0xFF27AE60)
-val Secondary = Color(0xFF3498DB)
+// Background layers (Huawei Health–style depth)
+val DarkBackground = Color(0xFF0D0F12)
+val DarkSurface = Color(0xFF161A1F)
+val DarkSurfaceVariant = Color(0xFF1E242B)
+val DarkElevated = Color(0xFF252C35)
 
-// Background
-val Background = Color(0xFF121212)
-val Surface = Color(0xFF1E1E1E)
+// Brand — neon green accent
+val PrimaryNeonGreen = Color(0xFF00E676)
+val PrimaryNeonGreenDim = Color(0xFF00C853)
+val PrimaryNeonGreenGlow = Color(0x3300E676)
 
-// Text
-val OnPrimary = Color.White
-val OnBackground = Color.White
-val OnSurface = Color(0xFFE0E0E0)
-
-// Status
-val Error = Color(0xFFE74C3C)
-
-// Status
-val Success = Color(0xFF4CAF50)
-val Warning = Color(0xFFFF9800)
-val Info = Color(0xFF2196F3)
-
-// Cards
-val Card = Color(0xFF202124)
-
-// Divider
-val Divider = Color(0xFF2E2E2E)
+// Secondary accents
+val SecondaryOrange = Color(0xFFFF9100)
+val SecondaryCyan = Color(0xFF00E5FF)
+val AccentRed = Color(0xFFFF5252)
 
 // Text
-val TextSecondary = Color(0xFFBDBDBD)
+val TextPrimary = Color(0xFFFFFFFF)
+val TextSecondary = Color(0xFF8B939E)
+val TextMuted = Color(0xFF5C6570)
+
+// Borders & dividers
+val CardBorder = Color(0xFF2A3139)
+val DividerColor = Color(0xFF1E242B)
+
+// Exercise ring colors (Huawei Health rings)
+val RingSteps = PrimaryNeonGreen
+val RingCalories = SecondaryOrange
+val RingDistance = SecondaryCyan
+val RingTrackBackground = Color(0xFF2A3139)
